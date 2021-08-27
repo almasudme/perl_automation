@@ -77,16 +77,6 @@ foreach my $sBuild (@aBuilds){
 
 my @aTestsToBench;
 
-# foreach (keys(%rFail)){
- # my $sSum = sum values (%{$rFail{$_}});
-  # if ($sSum >($#aBuilds)){
-    # push(@aTestsToBench,$_);
-  # }
-# }
-
-# my @aBench = join (" ",@aTestsToBench);
-# print @aBench;
-# print "\n Total: ".scalar(@aTestsToBench). " Failures matched at least ".scalar(@aBuilds)." times.\n ";
 
 foreach (keys(%rFail)){
  my $sSum = sum values (%{$rFail{$_}});
@@ -105,6 +95,6 @@ print "\n Total: ".scalar(@aTestsToBench). " Failures matched at least ".(scalar
 sub usage {
     print(
     '
-    qa_matched -m em64tL -b 2007.43
+    perl matched.pl -m em64tL -b 2007.43 -n 20
     ');
 }
